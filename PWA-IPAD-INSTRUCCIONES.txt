@@ -1,0 +1,31 @@
+MÚSCULOS IA — VERSIÓN PWA LOCAL PARA IPAD
+
+Qué cambió:
+- Ya no usa Grok ni XAI_API_KEY.
+- La corrección se realiza con el evaluador local incluido en el proyecto.
+- El progreso se guarda en el almacenamiento local del navegador.
+- Incluye manifest, iconos y service worker para funcionamiento como PWA/offline.
+
+IMPORTANTE SOBRE IPAD:
+Una PWA NO se instala directamente abriendo un ZIP ni un archivo HTML desde la app Archivos.
+Safari exige que la PWA se abra desde una dirección web HTTPS (o localhost durante desarrollo)
+para poder instalar el service worker y añadirla correctamente a la pantalla de inicio.
+
+FORMA RECOMENDADA:
+1. Publica el contenido de la carpeta dist/ en un hosting HTTPS estático (por ejemplo GitHub Pages,
+   Cloudflare Pages, Netlify o Vercel).
+2. Abre esa dirección en Safari en el iPad.
+3. Pulsa Compartir > Añadir a pantalla de inicio.
+4. Abre “Músculos IA” desde el icono.
+5. Después de la primera carga completa, la app puede seguir funcionando offline.
+
+PARA GENERAR dist/ EN WINDOWS:
+1. Descomprime este ZIP.
+2. Abre CMD en la carpeta.
+3. npm install
+4. npm run build
+5. La carpeta lista para publicar será dist/
+
+PARA PROBAR EN PC:
+npm run dev
+Luego abre http://localhost:8080
